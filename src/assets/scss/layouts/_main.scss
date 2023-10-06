@@ -1,0 +1,38 @@
+.main {
+  &-content {
+    background-color: $background;
+    padding: 28px 48px;
+    overflow: auto;
+  }
+}
+
+.card {
+  background-color: $white;
+  border-radius: 4px;
+  padding: 20px;
+  border: none;
+  width: 100%;
+
+  @include media-breakpoint-down(sm) {
+    padding: 24px 16px;
+  }
+
+  &-stops {
+    min-height: 444px;
+    padding: 20px 0;
+  }
+
+  &-empty {
+    height: 444px;
+    overflow: hidden;
+    :before {
+      content: '';
+      position: absolute;
+      border: 17px dashed $gray;
+      top: -15px;
+      bottom: -15px;
+      left: -15px;
+      right: -15px;
+    }
+  }
+}

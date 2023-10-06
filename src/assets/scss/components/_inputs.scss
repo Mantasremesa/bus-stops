@@ -1,0 +1,67 @@
+@mixin formGroup {
+  border: 1px solid $gray;
+  border-radius: 4px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 5px 16px;
+  background-color: $white;
+  width: 100%;
+  transition: 0.3s;
+
+  &:focus,
+  &:active,
+  &:focus-visible {
+    outline: none;
+    box-shadow: none;
+    border-color: $blue;
+  }
+}
+
+.form-group {
+  padding-top: 8px;
+  margin-bottom: 16px;
+
+  &__label {
+    position: absolute;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    height: 16px;
+    left: 10px;
+    top: calc(50% - 8px);
+    transition: 0.2s;
+    pointer-events: none;
+    padding: 0 6px;
+    color: $gray;
+    background: linear-gradient(rgba($white, 0), rgba($white, 0) 4px, $white 4px, $white);
+
+    &.focus {
+      color: $black;
+      font-size: 12px;
+      line-height: 12px;
+      top: -4px;
+    }
+  }
+
+  &__button {
+    width: 24px;
+    height: 24px;
+    border-radius: 0;
+    border: none;
+    position: absolute;
+    right: 15px;
+    top: calc(50% - 12px);
+    background-color: transparent;
+    padding: 0;
+  }
+
+  input {
+    @include formGroup;
+
+    .form-group__label:not(.focus) {
+      left: 36px;
+    }
+  }
+}

@@ -1,11 +1,11 @@
 openapi: 3.0.0
 info:
-  title: Interview Task API
-  description: Sample api for the interview task
+  title: Bus stops API
+  description: Sample api for bus stops app
   version: 0.0.1
   contact:
-    name: 'Michał Piotrowski'
-    email: 'michal.piotrowski@ingenious.build'
+    name: ''
+    email: ''
 servers:
   - url: http://localhost:3000
 paths:

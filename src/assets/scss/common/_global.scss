@@ -1,0 +1,43 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: $body-font-family;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  background-color: $background;
+  color: black;
+}
+
+#app {
+  flex-grow: 1;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+a {
+  transition: 0.3s;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+p {
+  font-weight: 600;
+}
+
+h4,
+.h4 {
+  font-style: normal;
+  font-weight: 600;
+}
